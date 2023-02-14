@@ -21,7 +21,7 @@ class RetrofitServerController {
     }
 
     /*
-    接收JSON形式的输入参数,produces可以不加
+    接收JSON形式的输入参数，必须用@RequestBody。produces表明返回值的形式，可以不加。
      */
     @PostMapping("/postinjson", produces = ["application/json;charset=utf-8"])
     fun postMethodInJson(@RequestBody postBody: PostReqBody): PostReqBody {
