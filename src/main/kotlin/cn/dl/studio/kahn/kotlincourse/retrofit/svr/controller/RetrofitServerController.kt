@@ -1,5 +1,6 @@
 package cn.dl.studio.kahn.kotlincourse.retrofit.svr.controller
 
+import cn.dl.studio.kahn.kotlincourse.retrofit.client.entity.GetApiResponse
 import cn.dl.studio.kahn.kotlincourse.retrofit.svr.constant.ApiUrl
 import cn.dl.studio.kahn.kotlincourse.retrofit.svr.entity.*
 import org.springframework.web.bind.annotation.GetMapping
@@ -29,7 +30,7 @@ class RetrofitServerController {
     }
 
     @GetMapping("/get/{item}")
-    fun getMethod(@PathVariable item: String): String {
-        return item
+    fun getMethod(@PathVariable item: String): GetApiResponse {
+        return GetApiResponse("str")
     }
 }
